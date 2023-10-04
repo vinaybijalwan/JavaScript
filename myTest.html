@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My JavaScript </h1>
+
+    <script>
+    //     const userDetails = {
+    //             firstName: "Jane",
+    //             lastName: "Daniels",
+    //             userName: "jane.daniels",
+    //             email: "jane.daniels@example.com",
+    //             comapny: "Example Inc.",
+    //             address: "1234 Example Street",
+    //             age : 25,
+    //             hobby: "Singing"
+    //     };
+
+    // console.log(userDetails);
+
+    // let keysArray = Object.keys(userDetails);
+    // console.log(keysArray);
+    
+    // const newArry = userDetails.filter(() => {
+    //     return 
+    // }
+
+    // )
+    // console.log(newArry)
+
+    const characters = [
+                { name: 'Batman', team: 'Justice League' },
+                { name: 'Hulk', team: 'Avengers' },
+                { name: 'Flash', team: 'Justice League' },
+                { name: 'Iron Man', team: 'Avengers' },
+                { name: 'Deadpool', team: 'X-Force' }
+            ]; 
+
+    
+    console.log(characters) 
+    
+    const avengers = characters.filter(character => character.team === 'Avengers'); 
+    console.log(avengers)
+    const XForce = characters.filter((character) => {
+        return character.team === 'X-Force'
+    }
+
+    )
+    console.log(XForce)
+
+    </script>
+</body>
+</html>
