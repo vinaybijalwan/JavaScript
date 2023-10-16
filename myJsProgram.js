@@ -655,3 +655,328 @@ const myList = ["vinay", "vijay", "vikash", "Lalit", "Sanjeev", "Chavvi", "Kavit
 
 
 //[ 4, 16, 36, 64, 100 ]
+
+
+
+/// ******* JavaScript String Methods
+
+// Extracting String Parts
+
+// There are 3 methods for extracting a part of a string:
+
+// slice(start, end)
+// substring(start, end)
+// substr(start, length)
+
+
+
+
+//JavaScript String slice()
+
+// slice() extracts a part of a string and returns the extracted part in a new string.
+
+// The method takes 2 parameters: start position, and end position (end not included).
+
+// let text = "Apple, Banana, Kiwi";
+
+// let part = text.slice(0, 5)
+// console.log(part) // Apple  - index from 0 to 4, (0, 5)end position (end not included)
+
+//If we omit the second parameter, the method will slice out the rest of the string:
+
+// let part = text.slice(7);
+//console.log(part) //Banana, Kiwi  , include 7 index position and rest of text given
+
+//If a parameter is negative, the position is counted from the end of the string:
+// let part = text.slice(-5); // Kiwi
+// let part = text.slice(-12); //Banana, Kiwi
+// console.log(part) 
+
+//This example slices out a portion of a string from position -12 to position -6:
+
+// let text = "Apple, Banana, Kiwi";
+// let part = text.slice(-12, -6); //Banana
+// console.log(part)
+
+
+/// ****** JavaScript String substring()
+//substring() is similar to slice().
+
+//The difference is that start and end values less than 0 are treated as 0 in substring().
+
+// let str = "Apple, Banana, Kiwi";
+// let part = str.substring(7, 13);
+// console.log(part)
+
+/// *************** JavaScript String substr()
+// The difference is that the second parameter specifies the length of the extracted part.The difference is that the second parameter specifies the length of the extracted part.
+// let str = "Apple, Banana, Kiwi";
+// let part = str.substr(7, 6); //Banana
+// let part = str.substr(2, 5); //ple  - it start with index number 2 and take length 5
+// console.log(part) 
+
+/// ******** Replacing String Content
+
+//The replace() method replaces a specified value with another value in a string:
+
+
+// let text = "I am Learn JavaScript";
+// let newText = text.replace("JavaScript", "React");
+// console.log(newText)  // I am Learn React
+
+//Note
+// The replace() method does not change the string it is called on.
+
+// The replace() method returns a new string.
+
+// The replace() method replaces only the first match
+
+// If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
+
+//Regular expressions are written without quotes.
+
+
+//JavaScript String ReplaceAll()
+
+
+
+
+/// ******* JavaScript String concat()
+
+//concat() joins two or more strings:
+
+// let text1 = "Hello";
+// let text2 = "World";
+// let text3 = text1.concat(" ", text2); //Hello World
+
+// console.log(text3)
+
+
+//Note
+
+// All string methods return a new string. They don't modify the original string.
+
+// Formally said:
+
+// Strings are immutable: Strings cannot be changed, only replaced.
+
+
+//JavaScript String trim()
+
+
+//The trim() method removes whitespace from both sides of a string:
+
+
+// let text1 = "      Hello World!      ";
+// let text2 = text1.trim(); //Hello World!
+
+// console.log(text2)
+
+
+//JavaScript String trimStart()
+
+//ECMAScript 2019 added the String method trimStart() to JavaScript.
+
+//The trimStart() method works like trim(), but removes whitespace only from the start of a string.
+
+// let text1 = "     Hello World!     ";
+// let text2 = text1.trimStart();
+// console.log(text2)   // Hello World!   
+
+// JavaScript String trimEnd()
+
+// ECMAScript 2019 added the string method trimEnd() to JavaScript.
+
+// The trimEnd() method works like trim(), but removes whitespace only from the end of a string.
+
+// let text1 = "     Hello World!     ";
+// let text2 = text1.trimEnd();
+// console.log(text2) 
+
+// JavaScript String Padding
+// ECMAScript 2017 added two new string methods to JavaScript: padStart() and
+// padEnd() to support padding at the beginning and at the end of a string.
+
+/// ******* JavaScript String padStart()
+
+// The padStart() method pads a string from the start.
+
+// It pads a string with another string (multiple times) until it reaches a given length.
+
+
+//Example 
+//Pad a string with "0" until it reaches the length 4:
+
+// let text = "5";
+// let padded = text.padStart(4,"0");
+// console.log(padded)   // 0005
+
+
+// JavaScript String padEnd()
+
+
+// The padEnd() method pads a string from the end.
+
+// It pads a string with another string (multiple times) until it reaches a given length.
+
+// let text = "5";
+// let padded = text.padEnd(4,"0");  
+// console.log(padded)  //5000
+
+
+// Extracting String Characters
+
+// There are 3 methods for extracting string characters:
+
+// charAt(position)
+// charCodeAt(position)
+// Property access [ ]
+
+//JavaScript String charAt()
+
+// The charAt() method returns the character at a specified index (position) in a string:
+
+
+// let text = "HELLO WORLD";
+// let char = text.charAt(0);
+// console.log(char)
+
+// JavaScript String charCodeAt()
+
+// The charCodeAt() method returns the unicode of the character at a specified index in a string:
+
+// The method returns a UTF-16 code (an integer between 0 and 65535).
+
+// let text = "HELLO WORLD";
+// let char = text.charCodeAt(0);    //72
+// console.log(char)
+
+
+// Converting a String to an Array
+
+//JavaScript String split() 
+
+// A string can be converted to an array with the split() method:
+
+// let text = "my name vinay and learn JavaScript"
+
+// let text1 = text.split(",")    // Split on commas
+// let text2 = text.split(" ")    // Split on spaces
+// let text3 =text.split("|")    // Split on pipe
+// console.log(text1)
+// console.log(text2)
+// console.log(text3)
+
+// [ 'my name vinay and learn JavaScript' ]
+// [ 'my', 'name', 'vinay', 'and', 'learn', 'JavaScript' ]
+// [ 'my name vinay and learn JavaScript' ]
+
+/// Date 16-10-2023
+
+//// ************  String Search Methods *********** /////
+// String indexOf()
+// String lastIndexOf()
+// String search()
+// String match()
+// String matchAll()
+// String includes()
+// String startsWith()
+// String endsWith()
+
+
+
+//// ******  JavaScript String indexOf()
+
+// The indexOf() method returns the index (position) the first occurrence of a string in a string:
+
+// let text = "Please locate where 'locate' occurs!";
+// let index = text.indexOf("locate");   // it on 7th position index
+// console.log(index)  // 7
+
+
+// JavaScript String lastIndexOf()
+// The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+// let text = "Please locate where 'locate' occurs!";
+// let index = text.lastIndexOf("locate");   // 21 last occarnce of "locate"
+// console.log(index)  
+
+//Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+
+
+// Both methods accept a second parameter as the starting position for the search:
+
+// let text = "Please locate where 'locate' occurs!";
+// let index = text.indexOf("locate", 15);
+// console.log(index)
+
+// The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 15, 
+// the search starts at position 15, and searches to the beginning of the string.
+
+
+/// *******  JavaScript String search() ******** ///
+
+// The search() method searches a string for a string (or a regular expression) and returns the position of the match:
+
+// let text = "Please locate where 'locate' occurs!";
+
+// console.log(text.search("locate"))    // 7
+
+
+// The two methods are NOT equal. These are the differences:
+
+// The search() method cannot take a second start position argument.
+// The indexOf() method cannot take powerful search values (regular expressions).
+
+
+
+///// *************** JavaScript String match() ************///
+
+// The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+
+// let text = "The rain in SPAIN stays mainly in the plain";
+// let myMatch =text.match("ain");
+
+// console.log(myMatch)
+
+// [
+//     'ain',
+//     index: 5,
+//     input: 'The rain in SPAIN stays mainly in the plain',
+//     groups: undefined
+//   ]
+
+
+///  ****************  JavaScript String matchAll() *************** // 
+
+// The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).
+
+
+
+/// **********  JavaScript String includes() ********** ///
+
+// The includes() method returns true if a string contains a specified value.
+
+// Otherwise it returns false.
+
+//Check if a string includes "world":
+
+// let text = "Hello world, welcome to the universe.";
+// text.includes("world");
+// console.log(text.includes("world"))   //true
+
+
+/// ************* JavaScript String startsWith() *********** ///
+
+// The startsWith() method returns true if a string begins with a specified value.
+
+// Otherwise it returns false:
+
+
+// let text = "Hello world, welcome to the universe.";
+// text.startsWith("Hello");
+// console.log(text.startsWith("Hello")) // true
+
+
+//A start position for the search can be specified: 
+
