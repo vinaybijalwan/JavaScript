@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh
+        }
+
+        /* .new1{
+            display: flex;
+            justify-content:center;
+            vertical-align: auto;
+        } */
+        .first{
+            padding: 5px;
+        }
+
+        .second{
+            padding: 5px;
+        }
+
+        .third{
+            padding: 5px;
+        }
+
+
+        .btn{
+            cursor: pointer;
+            size: 2px;
+            padding: 5px;
+           border-radius: 2px;
+           
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div id="new1">
+            <div class="first">First Child</div>
+            <div class="first">Second Child</div>
+            <div class="first">Third Child</div>
+            <div class="first">
+
+            </div>
+            
+        </div>
+        <div class="btn">
+            <button id="btn1" onclick="">Click me</button>
+        </div>
+        <div id="mynew"></div>
+    </div>
+   <script>
+        // const new1 = document.getElementById('new1')
+        // new1.addEventListener("click", () => {
+        //     new1.style.backgroundColor = "grey"
+        // })
+        document.getElementById('mynew').innerHTML = "Forth Child"
+        document.getElementById("mynew").style.color = "blue";
+        document.getElementsByClassName('first')[0].style.color = "red";
+        document.getElementsByClassName('first')[1].style.color = "green";
+        document.getElementsByClassName('first')[1].style.color = "purple";
+        document.getElementsByClassName('main')[0].style.backgroundColor = "Tomato";
+        
+        const btn1 = document.getElementById('btn1')
+        btn1.addEventListener("click", () => {
+            document.getElementsByClassName('main')[0].style.backgroundColor = "#3d3d3d"
+        })
+
+
+   </script>
+</body>
+</html>
