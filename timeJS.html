@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time in JS</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .btn{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div>
+            <h1>My Timer</h1>
+            <p id="myWatch"></p>
+            <br>
+            <button class="btn">Start Time</button>
+            <button class="btn">Stop Time</button>
+        </div>
+    </div>
+    <script>
+        const btn1 = document.getElementsByClassName('btn')[0]
+        const btn2 = document.getElementsByClassName('btn')[1]
+        console.log(btn1)
+        console.log(btn2)
+
+        let mytime;
+
+        const startTime = () => {
+                console.log("this is btn1 click")
+                const date = new Date();
+                mytime =  setInterval(() => {
+                            document.getElementById('myWatch').innerHTML = date.toLocaleTimeString();
+                            console.log("Hello")
+                            }, 1000)
+            }
+
+        btn1.addEventListener('click', startTime)
+
+        const stopTime = () => {
+            console.log("Stop my time")
+            clearInterval(mytime)
+        }
+
+        btn2.addEventListener('click', stopTime)
+
+    </script>
+</body>
+</html>
