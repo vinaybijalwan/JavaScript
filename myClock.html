@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clock</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(247, 179, 179);
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .time{
+            /* background-color: aliceblue; */
+        }
+
+        .getTime{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="time">
+            <h1>Time</h1>
+            <p class="getTime"></p>
+        </div>
+    </div>
+    <script>
+        const myfunction = () => {
+            let d = new Date();
+        document.getElementsByClassName('getTime')[0].innerHTML = (d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()) 
+            
+        }
+
+        setInterval(myfunction, 1000)
+    </script>
+</body>
+</html>
