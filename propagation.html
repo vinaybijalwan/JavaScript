@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagation in JS</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .btn1{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+
+        .btn2{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <div class="outer">
+            <h3>Outer to inner event fire -- trickling</h3>
+                <button class="btn2">trickling</button>
+
+            <div class="inner">
+                <h2>Inner to outer capturing(event fire ) is bubble push</h2>
+                <button id = "btn1">Bubble Click</button>
+              
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn1 = document.getElementById('btn1')
+        const btn2 = document.getElementById('btn2')
+
+        const mybubble = () => {
+            alert("this is Bubble Propagation")
+        }
+
+        btn1.addEventListener('click', mybubble)
+
+        const trickling = () => {
+            alert("this is Outer to inner Propagation")
+        }
+
+        btn2.addEventListener('click', trickling)
+
+    </script>
+</body>
+</html>
